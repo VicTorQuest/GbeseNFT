@@ -1,0 +1,33 @@
+{
+  "name": "gbesenft",
+  "version": "1.0.0",
+  "description": "An ERC-721 nft reward for the gbese webapp",
+  "main": "script/run.js",
+  "scripts": {
+    "test": "scripts/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VicTorQuest/GbeseNFT.git"
+  },
+  "keywords": [
+    "NFT",
+    "Gbese",
+    "Reward",
+    "ERC-721"
+  ],
+  "author": "Victor Okolie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VicTorQuest/GbeseNFT/issues"
+  },
+  "homepage": "https://github.com/VicTorQuest/GbeseNFT#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.3.0",
+    "dotenv": "^16.5.0",
+    "hardhat": "^2.23.0",
+    "install": "^0.13.0",
+    "npm": "^11.3.0"
+  }
+}
