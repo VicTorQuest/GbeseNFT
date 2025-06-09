@@ -93,3 +93,73 @@ contract GbeseArts is ERC721URIStorage, Ownable {
 ---
 
 ## Usage
+
+### 1. Configure Gbese Token
+
+```solidity
+await gbeseArts.setTokenContract(<GbeseTokenAddress>);
+```
+
+### 2. Set Base URI
+
+```solidity
+await gbeseArts.setBaseURI("ipfs://<your-base-cid>/");
+```
+
+### 3. Admin Mint
+
+```solidity
+await gbeseArts.mintGbeseArt(recipientAddress, "ipfs://<metadata-cid>");
+```
+
+### 4. Purchase with GBT
+
+**Approve GBT Spending**
+
+```solidity
+await gbeseToken.approve(gbeseArts.address, priceInWei);
+```
+
+**Purchase the NFT**
+
+```solidity
+await gbeseArts.purchaseNFT("ipfs://<metadata-cid>");
+```
+
+---
+
+## 📦 Deliverables
+
+* **Sourcify Full-Match**
+  [https://repo.sourcify.dev/contracts/full\_match/84532/0xc597FaaaaF61862f6ddb1015f3B209a51efac85F/](https://repo.sourcify.dev/contracts/full_match/84532/0xc597FaaaaF61862f6ddb1015f3B209a51efac85F/)
+
+* **BaseScan Verified Contract**
+  [https://sepolia.basescan.org/address/0xc597FaaaaF61862f6ddb1015f3B209a51efac85F#code](https://sepolia.basescan.org/address/0xc597FaaaaF61862f6ddb1015f3B209a51efac85F#code)
+
+* **Contract Address**
+  `0xc597FaaaaF61862f6ddb1015f3B209a51efac85F`
+
+* **OpenSea Testnet Collection**
+  [https://testnets.opensea.io/collection/gbese-arts-11](https://testnets.opensea.io/collection/gbese-arts-11)
+
+---
+
+## ⚙️ Configuration Notes
+
+* **Solidity Version:** `^0.8.28`
+* **ERC Standard:** `ERC721URIStorage`
+* **Ownership:** `Ownable` from OpenZeppelin
+* **Token-Based Pricing:** Set in `nftPriceInTokens`
+* **Compatible Token:** ERC-20 with 18 decimals (e.g. GBT)
+
+---
+
+## 🖼️ Screenshots
+
+### NFT Collection on OpenSea (Base Sepolia)
+
+![collection](./collection.png)
+
+### Minting NFT via BaseScan
+
+![minting](./minting.png)
